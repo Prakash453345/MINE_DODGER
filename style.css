@@ -58,20 +58,20 @@ h2 {
 
     #total {
         padding: 20px;
-        grid-template-columns: 1fr; /* Stack elements in one column */
+        grid-template-columns: 1fr; 
         justify-items: center;
     }
 
     h2 {
         margin-left: 0;
-        text-align: center; /* Center h2 for mobile */
+        text-align: center; 
     }
 
     
     .btn {
         width: 60px;
         height: 60px;
-        margin-left: 0;
+        margin-left: 5px;
         margin-bottom: 10px;
     }
 
