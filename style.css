@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#total {
+    display: grid;
+    justify-content: center;
+}
+
+.btn {
+    margin-left: 30px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin-left: 110px;
+    color: #d0a9f5;
+}
+
+
+.restart-button {
+    margin: 20px auto;
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    display: none;
+}
+
+.restart-button:hover {
+    background-color: #0056b3;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+   
+    #total {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    
+    .btn {
+        margin-left: 0;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+
+    .restart-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .btn {
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+    }
+
+    
+    .restart-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
