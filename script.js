@@ -115,7 +115,7 @@ buttons.forEach((button, index) => {
       if (safeButtonsClicked === totalSafeButtons) {
         gameOver = true;
         messageElement = document.createElement('h3');
-        messageElement.classList.add("msg-win")
+        messageElement.classList.add("msg-win");
         messageElement.innerText = `Congratulations! You found all the diamonds!`;
         tag.after(messageElement);
         
@@ -128,8 +128,8 @@ buttons.forEach((button, index) => {
 
       else {
         messageElement = document.createElement('h3');
-        messageElement.innerText = `Safe! Keep going.`;
         messageElement.classList.add("msg-win");
+        messageElement.innerText = `Safe! Keep going.`;
         tag.after(messageElement);
       }
     }
