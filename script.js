@@ -8,8 +8,8 @@ let restart = document.createElement('button');
 let safeButtonsClicked = 0;
 let totalSafeButtons = buttons.length - mines;
 
-restart.textContent = "Play Again";
-restart.classList.add("restart-button");
+restart.textContent="Play Again";
+restart.classList.add("restart-button") ;
 
 restart.addEventListener('click', () => {
   resetGame();
@@ -22,6 +22,7 @@ function resetGame() {
   gameOver = false;
   safeButtonsClicked = 0;
   
+
   buttons.forEach(button => {
     button.innerHTML = '';
     button.disabled = false;
@@ -80,55 +81,6 @@ function revealAllMines() {
   });
 }
 
-// Adjust styles for mobile
-function adjustStylesForMobile() {
-  const isMobile = window.innerWidth <= 768;
-
-  if (isMobile) {
-    // Adjust button size and layout for mobile view
-    buttons.forEach(button => {
-      button.style.width = '50px';
-      button.style.height = '50px';
-      button.style.fontSize = '20px';
-    });
-
-    // Adjust restart button
-    restart.style.fontSize = '14px';
-    restart.style.padding = '8px 20px';
-    restart.style.fontWeight = 'bold';
-    restart.style.borderRadius = '5px';
-
-    // Adjust message style
-    if (messageElement) {
-      messageElement.style.marginLeft = '0';
-      messageElement.style.textAlign = 'center';
-    }
-  } else {
-    // Reset back to default sizes for larger screens
-    buttons.forEach(button => {
-      button.style.width = '80px';
-      button.style.height = '80px';
-      button.style.fontSize = '24px';
-    });
-
-    // Reset restart button for larger screens
-    restart.style.fontSize = '16px';
-    restart.style.padding = '10px 25px';
-
-    // Reset message style
-    if (messageElement) {
-      messageElement.style.marginLeft = '30px';
-      messageElement.style.textAlign = 'left';
-    }
-  }
-}
-
-// Apply styles when window is resized
-window.addEventListener('resize', adjustStylesForMobile);
-
-// Call the function to adjust styles when the game starts
-adjustStylesForMobile();
-
 buttons.forEach((button, index) => {
   button.addEventListener('click', () => {
     if (gameOver) return;
@@ -142,10 +94,11 @@ buttons.forEach((button, index) => {
       gameOver = true;
       symbolSpan.style.visibility = 'visible';
       messageElement = document.createElement('h3'); 
-      messageElement.style.marginLeft = '30px';
+      messageElement.style.marginLeft = '210px';
       messageElement.style.color = '#dc3545';
       messageElement.innerText = `Boom! You hit a mine.`;
       tag.after(messageElement);
+      
       
       buttons.forEach(btn => {
         btn.disabled = true;
@@ -165,7 +118,7 @@ buttons.forEach((button, index) => {
         messageElement = document.createElement('h3');
         messageElement.innerText = `Congratulations! You found all the diamonds!`;
         messageElement.style.color = '#28a745';
-        messageElement.style.marginLeft = '30px';
+        messageElement.style.marginLeft = '210px';
         tag.after(messageElement);
         
         buttons.forEach(btn => {
@@ -179,7 +132,7 @@ buttons.forEach((button, index) => {
         messageElement = document.createElement('h3');
         messageElement.innerText = `Safe! Keep going.`;
         messageElement.style.color = '#28a745';
-        messageElement.style.marginLeft = '30px';
+        messageElement.style.marginLeft = '210px';
         tag.after(messageElement);
       }
     }
