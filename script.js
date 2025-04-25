@@ -129,8 +129,7 @@ buttons.forEach((button, index) => {
       else {
         messageElement = document.createElement('h3');
         messageElement.innerText = `Safe! Keep going.`;
-        messageElement.style.color = '#28a745';
-        messageElement.style.marginLeft = '210px';
+        messageElement.classList.add("msg-win");
         tag.after(messageElement);
       }
     }
