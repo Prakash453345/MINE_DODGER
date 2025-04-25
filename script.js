@@ -94,8 +94,7 @@ buttons.forEach((button, index) => {
       gameOver = true;
       symbolSpan.style.visibility = 'visible';
       messageElement = document.createElement('h3'); 
-      messageElement.style.marginLeft = '210px';
-      messageElement.style.color = '#dc3545';
+      messageElement.classList.add("msg-lost")
       messageElement.innerText = `Boom! You hit a mine.`;
       tag.after(messageElement);
       
@@ -116,9 +115,8 @@ buttons.forEach((button, index) => {
       if (safeButtonsClicked === totalSafeButtons) {
         gameOver = true;
         messageElement = document.createElement('h3');
+        messageElement.classList.add("msg-win")
         messageElement.innerText = `Congratulations! You found all the diamonds!`;
-        messageElement.style.color = '#28a745';
-        messageElement.style.marginLeft = '210px';
         tag.after(messageElement);
         
         buttons.forEach(btn => {
