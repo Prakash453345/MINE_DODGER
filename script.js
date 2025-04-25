@@ -94,7 +94,7 @@ buttons.forEach((button, index) => {
       gameOver = true;
       symbolSpan.style.visibility = 'visible';
       messageElement = document.createElement('h3'); 
-      messageElement.style.marginLeft = '210px';
+      messageElement.style.marginLeft = '110px';
       messageElement.style.color = '#dc3545';
       messageElement.innerText = `Boom! You hit a mine.`;
       tag.after(messageElement);
@@ -118,7 +118,7 @@ buttons.forEach((button, index) => {
         messageElement = document.createElement('h3');
         messageElement.innerText = `Congratulations! You found all the diamonds!`;
         messageElement.style.color = '#28a745';
-        messageElement.style.marginLeft = '210px';
+        messageElement.style.marginLeft = '110px';
         tag.after(messageElement);
         
         buttons.forEach(btn => {
@@ -132,7 +132,7 @@ buttons.forEach((button, index) => {
         messageElement = document.createElement('h3');
         messageElement.innerText = `Safe! Keep going.`;
         messageElement.style.color = '#28a745';
-        messageElement.style.marginLeft = '210px';
+        messageElement.style.marginLeft = '110px';
         tag.after(messageElement);
       }
     }
