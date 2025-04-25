@@ -11,7 +11,6 @@ body {
     justify-content: center;
 }
 
-
 .btn {
     margin-left: 30px;
     width: 80px;
@@ -49,51 +48,84 @@ h2 {
     background-color: #0056b3;
 }
 
+.msg-lost
+{
+    margin-left: 210px;
+    color: #dc3545;
+}
+
+.msg-win
+{
+    margin-left: 210px;
+    color: #28a745;
+}
+
 
 @media screen and (max-width: 768px) {
-    body {
-        
-        background: linear-gradient(to bottom, #1e3c72, #2a5298);
-    }
-
-    #total {
-        padding: 20px;
-        grid-template-columns: 1fr; 
-        justify-items: center;
-    }
-
+    
     h2 {
         margin-left: 0;
-        text-align: center; 
+        text-align: center;
+    }
+
+   
+    #total {
+        padding: 20px;
+        grid-template-columns: 1fr;
     }
 
     
     .btn {
-        width: 60px;
-        height: 60px;
         margin-left: 5px;
+        width: 70px;
+        height: 70px;
         margin-bottom: 10px;
+        font-size: 14px;
     }
+
 
     .restart-button {
         padding: 10px 20px;
         font-size: 14px;
     }
+
+    .msg-win
+    {
+        margin-left: 60px;
+    }
+
+    .msg-lost
+    {
+        margin-left: 60px;
+    }
+
+
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        background: linear-gradient(to bottom, #1e3c72, #2a5298);
-    }
-
+    
     .btn {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         font-size: 12px;
     }
 
+    
     .restart-button {
         padding: 8px 15px;
         font-size: 12px;
     }
+
+    .msg-win
+    {
+        margin-left: 60px;
+    }
+
+    .msg-lost
+    {
+        margin-left: 60px;
+    }
+
+
+
 }
